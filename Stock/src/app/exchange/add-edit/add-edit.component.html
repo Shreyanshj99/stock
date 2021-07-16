@@ -1,0 +1,32 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Stock Exchange</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="stock_exchange"
+        placeholder="Enter stock exchange">
+    </div>
+    <label class="col-sm-2 col-form-label">Brief</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="brief"
+        placeholder=" Enter brief ">
+    </div>
+    <label class="col-sm-2 col-form-label">Contacts</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="contact"
+        placeholder="Contacts">
+    </div>
+    <label class="col-sm-2 col-form-label">Remarks</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="remarks"
+        placeholder="Remarks">
+    </div>
+    
+</div>
+
+<button (click)="addExchange()" *ngIf="exc.id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateExchange()" *ngIf="exc.id!=0" class="btn btn-primary">
+    Update
+</button>

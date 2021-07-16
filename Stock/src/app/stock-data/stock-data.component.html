@@ -1,0 +1,49 @@
+<app-admin></app-admin><br><br>
+
+<div class="input-group w-50">
+    <div class="custom-file">
+      <input type="file" (change)="onFileChange($event)"  multiple="false" />
+      
+    </div>
+   
+  </div>
+  <button type="button" class="btn btn-primary float-center m-2" 
+data-toggle="modal" data-target="#exampleModal"
+(click)="addStock()"
+data-backdrop="static" data-keyboard="false"
+>
+    Add Stock-data
+  </button>
+
+  
+<table class="table table-striped">
+  <thead *ngIf="act">
+    <tr>
+        <th>
+          Company Code
+        </th>
+        <th>
+          Stock Exchange
+        </th>
+        <th>
+          Current Price
+        </th>
+        <th>
+          Date
+        </th>
+        <th>
+          Time
+        </th>
+       
+    </tr>
+</thead>
+<tbody>
+        <tr *ngFor="let row of x">
+            
+            <td *ngFor="let cell of row">
+                {{cell}}
+            </td>
+        </tr>
+      </tbody>   
+    
+</table>

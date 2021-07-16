@@ -1,0 +1,30 @@
+
+<form [formGroup]="formModel" autocomplete="off"  (submit)="onSubmit()" >
+    <div class="form-group required">
+      <label>Current Password</label>
+      <input type="password" class="form-control" formControlName="Current_Password">
+      <label class="text-danger" *ngIf="formModel.get('Current_Password')!.touched && formModel.get('Current_Password')!.errors?.required">This field is mandatory.</label>
+      <label class="text-danger" *ngIf="formModel.get('Current_Password')!.touched && formModel.get('Current_Password')!.errors?.minlength">Minimum 4 characters required.</label>
+    </div>
+<div formGroupName="Passwords">
+    <div class="form-group required">
+      <label>New Password</label>
+      <input type="password" class="form-control" formControlName="New_Password">
+      <label class="text-danger" *ngIf="formModel.get('Passwords.New_Password')!.touched && formModel.get('Passwords.New_Password')!.errors?.required">This field is mandatory.</label>
+  <label class="text-danger" *ngIf="formModel.get('Passwords.New_Password')!.touched && formModel.get('Passwords.New_Password')!.errors?.minlength">Minimum 4 characters required.</label>
+
+                </div>
+    <div class="form-group required">
+      <label>Confirm Password</label>
+      <input type="password" class="form-control" formControlName="Confirm_Password">
+      <label class="text-danger" *ngIf="formModel.get('Passwords.Confirm_Password')!.touched && formModel.get('Passwords.Confirm_Password')!.errors?.required">This field is mandatory.</label>
+      <label class="text-danger" *ngIf="formModel.get('Passwords.Confirm_Password')!.touched && formModel.get('Passwords.Confirm_Password')!.errors?.passwordMismatch">Confirm Password does not match.</label>
+
+            </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8 offset-md-2">
+      <button type="submit" class="btn btn-dark btn-block" [disabled]="!formModel.valid" >Update Password</button>
+    </div>
+  </div>
+</form>

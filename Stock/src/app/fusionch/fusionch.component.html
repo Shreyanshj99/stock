@@ -1,0 +1,158 @@
+<app-home></app-home>
+<!--
+<div class="chart-wrapper" style="position: relative; height:30vh; width:40vw">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>
+-->
+<!--
+<table class="table table-striped">
+    <thead >
+      <tr>
+          <th>
+            Company Code
+          </th>
+          <th>
+            Stock Exchange
+          </th>
+          <th>
+            Current Price
+          </th>
+          <th>
+            Date
+          </th>
+          <th>
+            Time
+          </th>
+         
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataitem of stocklist">
+        <td>{{dataitem.company_Code}}</td>
+        <td>{{dataitem.stock_Exchange}}</td>
+        <td>{{dataitem.current_Price}}</td>
+        <td>{{dataitem.date}}</td>
+        <td>{{dataitem.time}}</td>
+          </tr>
+        </tbody>   
+      
+  </table>
+
+-->
+
+<div  class="form-group row">
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">Company Code </label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="company_code"
+        placeholder="" required>
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">Stock Exchange </label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="stock_exchange"
+        placeholder="" required>
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">Company Name</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="company_name"
+        placeholder="">
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">From Period</label>
+    <div class="col-sm-6">
+        <input type="date" class="form-control" [(ngModel)]="from_period"
+        placeholder="">
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">To Period</label>
+    <div class="col-sm-6">
+        <input type="date" class="form-control" [(ngModel)]="to_period"
+        placeholder="">
+    </div>
+    <div class="col-sm-3"></div>
+<br><br><br><br>
+
+    <div *ngIf="t" class="form-group row">
+     
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label">Company Code </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="company_code1"
+            placeholder="" required>
+        </div>
+        <div class="col-sm-3"></div>
+    
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label">Stock Exchange </label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="stock_exchange1"
+            placeholder="" required>
+        </div>
+        <div class="col-sm-3"></div>
+    
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label">Company Name</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="company_name1"
+            placeholder="">
+        </div>
+        <div class="col-sm-3"></div>
+      
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-6">
+            
+        </div>
+        <div class="col-sm-3"></div>
+    
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-6">
+           
+        </div>
+        <div class="col-sm-3"></div>
+        
+        
+    </div>
+     
+    
+
+    <div class="col-sm-1"></div>
+<button (click)="add()" class="btn btn-primary">
+    Generate Map
+</button>
+<div class="col-sm-6"></div>
+<button (click)="extra()"  class="btn btn-primary ">
+    Add Company
+ </button>
+
+
+   
+
+</div>
+
+<div class ="row">
+<div class="col-sm-2"></div>
+<div *ngIf="chart" class="col-sm-6" style="position: relative; height:30vh; width:40vw">
+    <canvas id="canvas">{{ chart }}</canvas>
+  </div>
+<div class="col-sm-4"></div>
+</div>

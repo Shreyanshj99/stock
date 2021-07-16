@@ -1,0 +1,38 @@
+<img src="/assets/img/single_user.png" class="mx-auto d-block">
+<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+  
+  <div class="form-group">
+    <label>Username</label>
+    <input class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" required>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required>
+  </div>
+  <div class="form-group">
+    <label>Roles</label><br>
+     <!--
+    <input type="radio" class="form-control" #Roles="ngModel" value="user" name="Roles" [(ngModel)]="formModel.Roles" id="1" required checked><label for="1" >User</label>
+   
+    <input type="radio" class="form-control" #Roles="ngModel" value="admin" name="Roles" [(ngModel)]="formModel.Roles" id="2" required><label for="2">Admin</label>
+     -->
+    <div class="form-check-inline">
+     
+      <input class="form-check-input" type="radio" #Roles="ngModel" value="user" name="Roles" [(ngModel)]="formModel.Roles" id="flexRadioDefault1" required>
+      <label class="form-check-label" for="flexRadioDefault1">
+       User
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <input class="form-check-input" type="radio" #Roles="ngModel" value="admin" name="Roles" [(ngModel)]="formModel.Roles" id="flexRadioDefault2" required>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Admin
+      </label>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8 offset-md-2">
+      <button type="submit" class="btn btn-lg btn-block" [disabled]="form.invalid" >Login</button>
+    </div>
+  </div>
+</form>

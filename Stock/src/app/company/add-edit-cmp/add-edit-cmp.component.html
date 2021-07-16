@@ -1,0 +1,57 @@
+
+<div class="form-group row" required>
+
+    <label class="col-sm-2 col-form-label">Company Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="company_name"
+        placeholder="Enter Company Name" required>
+    </div>
+    <label class="col-sm-2 col-form-label">Company Code</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="company_code"
+        placeholder="Enter Company Code" required>
+    </div>
+    <label class="col-sm-2 col-form-label">turnover</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="turnover"
+        placeholder=" turnover " required>
+    </div>
+    <label class="col-sm-2 col-form-label">Ceo</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="ceo"
+        placeholder="Ceo" required>
+    </div>
+    <label class="col-sm-2 col-form-label">Board Director</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="board_directors"
+        placeholder="Board Director" required>
+    </div>
+    <label class="col-sm-2 col-form-label">Brief</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="brief"
+        placeholder="Brief" ng-required="brief">
+    </div>
+    <label class="col-sm-2 col-form-label">Sector</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="sector"
+        placeholder="Sector" required>
+    </div>
+    <label class="col-sm-2 col-form-label">Stock Exchange</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="stock_exchange"
+        placeholder="Stock Exchange" required>
+    </div>
+    <label class="col-sm-2 col-form-label">Stock Code</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="stock_code"
+        placeholder="Stock Code" required>
+    </div>
+</div>
+
+<button (click)="addCompany()" *ngIf="cmp.id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateCompany()" *ngIf="cmp.id!=0" class="btn btn-primary">
+    Update
+</button>
