@@ -1,0 +1,106 @@
+<app-home></app-home>
+<div  class="form-group row">
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">Sector Name </label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="sector"
+        placeholder="Health/IT/Hotel" required>
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">Stock Exchange </label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="stock_exchange"
+        placeholder="bse/nse" required>
+    </div>
+    <div class="col-sm-3"></div>
+
+    
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">From Period</label>
+    <div class="col-sm-6">
+        <input type="date" class="form-control" [(ngModel)]="from_period"
+        placeholder="">
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-1"></div>
+    <label class="col-sm-2 col-form-label">To Period</label>
+    <div class="col-sm-6">
+        <input type="date" class="form-control" [(ngModel)]="to_period"
+        placeholder="">
+    </div>
+    <div class="col-sm-3"></div>
+<br><br><br><br>
+
+    <div *ngIf="t" class="form-group row">
+     
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Sector Name </label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" [(ngModel)]="sector1"
+            placeholder="Health/IT/Hotel" required>
+        </div>
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-6">
+            
+        </div>
+        <div class="col-sm-3"></div>
+    
+        <div class="col-sm-2"></div>
+        <label class="col-sm-2 col-form-label">Stock Exchange </label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" [(ngModel)]="stock_exchange1"
+            placeholder="bse/nse" required>
+        </div>
+        <div class="col-sm-3"></div>
+    
+        
+      
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-6">
+            
+        </div>
+        <div class="col-sm-3"></div>
+    
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-6">
+           
+        </div>
+        <div class="col-sm-3"></div>
+        
+        
+        
+    </div>
+    
+     
+    
+
+    <div class="col-sm-3"></div>
+<button (click)="add()" class="btn btn-primary">
+    Generate Map
+</button>
+<div class="col-sm-2"></div>
+<button (click)="extra()"  class="btn btn-primary ">
+    Add Sector
+ </button>
+
+
+   
+
+</div>
+
+<div class ="row">
+    <div class="col-sm-2"></div>
+    <div *ngIf="chart" class="col-sm-6" style="position: relative; height:30vh; width:40vw">
+        <canvas id="canvas">{{ chart }}</canvas>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>

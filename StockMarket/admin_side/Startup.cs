@@ -88,7 +88,7 @@ namespace admin_side
             app.UseHttpsRedirection();
 
             app.UseCors(builder =>
-                  builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString())
+                  builder.AllowAnyOrigin()
                   .AllowAnyHeader()
                   .AllowAnyMethod());
             app.UseAuthentication();

@@ -40,6 +40,7 @@ export class EditComponent implements OnInit {
     this.service.ChangePassword(body).subscribe(
       (res:any) => {
         this.toastr.success('Password updated','Successful');
+        console.log("success");
       },
       err=> {
         if (err.status == 400)

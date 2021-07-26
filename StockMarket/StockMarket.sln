@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User_side", "StockMarket\User_side.csproj", "{25E9453D-2EB5-4B43-97A1-902D85065CF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{366A2191-4C33-4E33-B7B4-B10FF6F52345}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{366A2191-4C33-4E33-B7B4-B10FF6F52345}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admin_side", "admin_side\admin_side.csproj", "{9A79CE9F-BD66-4A57-A7E9-090301A2F12F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "admin_side", "admin_side\admin_side.csproj", "{9A79CE9F-BD66-4A57-A7E9-090301A2F12F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

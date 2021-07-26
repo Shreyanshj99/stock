@@ -40,6 +40,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditComponent } from './profile/edit/edit.component';
 import { UsercompanyComponent } from './usercompany/usercompany.component';
 import { FusionchComponent } from './fusionch/fusionch.component';
+import { SectorComponent } from './sector/sector.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +65,8 @@ import { FusionchComponent } from './fusionch/fusionch.component';
     ProfileComponent,
     EditComponent,
     UsercompanyComponent,
-    FusionchComponent
+    FusionchComponent,
+    SectorComponent
   ],
   imports: [
     BrowserModule,

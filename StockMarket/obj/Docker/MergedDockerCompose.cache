@@ -1,0 +1,28 @@
+services:
+  admin_side:
+    build:
+      context: C:\Users\hp\source\repos\StockMarket
+      dockerfile: admin_side/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: adminside
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\hp\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+  user_side:
+    build:
+      context: C:\Users\hp\source\repos\StockMarket
+      dockerfile: StockMarket/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: userside
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\hp\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+version: '3.4'

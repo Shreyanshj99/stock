@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  admin_side:
+    image: ${DOCKER_REGISTRY-}adminside
+    build:
+      context: .
+      dockerfile: admin_side/Dockerfile
+
+  user_side:
+    image: ${DOCKER_REGISTRY-}userside
+    build:
+      context: .
+      dockerfile: StockMarket/Dockerfile
+

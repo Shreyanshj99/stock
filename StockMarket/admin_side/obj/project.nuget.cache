@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KLDVAHAYj6L0ZxjO8TJ5IOv9Fcw9hZTqKC7dhA70wagDdPHd9iG4NV6fiz5kIiEtFl8TYgcT3ZCvaXRjb+WZvg==",
+  "dgSpecHash": "3QomyPEC5R+h9rKyoi3Q5kYwwr10yGIN2moSLuEGfiM3e/PxcUTRMVgMdygxve7agzjujlAGZIUWDWuONjSaSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\StockMarket\\admin_side\\admin_side.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\mongodb.bson\\2.12.4\\mongodb.bson.2.12.4.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\mongodb.driver\\2.12.4\\mongodb.driver.2.12.4.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\mongodb.driver.core\\2.12.4\\mongodb.driver.core.2.12.4.nupkg.sha512",

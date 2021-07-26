@@ -12,65 +12,65 @@ export class SharedService {
 
   //Company
   getCmpList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl1+'/Company');
+    return this.http.get<any>(this.APIUrl+'/Company');
   }
 
   addCmp(val:any){
-    return this.http.post(this.APIUrl1+'/Company',val);
+    return this.http.post(this.APIUrl+'/Company',val);
   }
 
   updateCmp(val1:string,val2: any){
-    return this.http.put(this.APIUrl1+'/Company/'+val1,val2);
+    return this.http.put(this.APIUrl+'/Company/'+val1,val2);
   }
 
   deleteCmp(val3:any){
-    return this.http.delete(this.APIUrl1+'/Company/'+val3,val3);
+    return this.http.delete(this.APIUrl+'/Company/'+val3,val3);
   }
 
   //Stock_data
   addStock(val:any[]){
-    return this.http.post(this.APIUrl1+'/Stock_data',val);
+    return this.http.post(this.APIUrl+'/Stock_data',val);
   }
 
   getStock():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl1+'/Stock_data');
+    return this.http.get<any>(this.APIUrl+'/Stock_data');
   }
 
 
 
   //Exchange
   getExcList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl1+'/Exchange');
+    return this.http.get<any>(this.APIUrl+'/Exchange');
   }
 
   addExc(val:any){
-    return this.http.post(this.APIUrl1+'/Exchange',val);
+    return this.http.post(this.APIUrl+'/Exchange',val);
   }
 
   updateExc(val1:string,val2: any){
-    return this.http.put(this.APIUrl1+'/Exchange/'+val1,val2);
+    return this.http.put(this.APIUrl+'/Exchange/'+val1,val2);
   }
 
   deleteExc(val3:any){
-    return this.http.delete(this.APIUrl1+'/Exchange/'+val3,val3);
+    return this.http.delete(this.APIUrl+'/Exchange/'+val3,val3);
   }
 
 
   //IPOs
   getIPOList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl1+'/IPO');
+    return this.http.get<any>(this.APIUrl+'/IPO');
   }
 
   addIPO(val:any){
-    return this.http.post(this.APIUrl1+'/IPO',val);
+    return this.http.post(this.APIUrl+'/IPO',val);
   }
 
   updateIPO(val1:string,val2: any){
-    return this.http.put(this.APIUrl1+'/IPO/'+val1,val2);
+    return this.http.put(this.APIUrl+'/IPO/'+val1,val2);
   }
 
   deleteIPO(val3:any){
-    return this.http.delete(this.APIUrl1+'/IPO/'+val3,val3);
+    return this.http.delete(this.APIUrl+'/IPO/'+val3,val3);
   }
 
   

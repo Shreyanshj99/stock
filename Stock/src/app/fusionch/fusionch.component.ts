@@ -153,35 +153,51 @@ export class FusionchComponent implements OnInit {
     //console.log(date2);
     var date3:any=Array.from(date2.values()).sort();
     console.log(date3);
-    let i=0;
-    let j=0;
-    let k=0;
-    while(i<date3.length){
+    var i1=0;
+    var j1=0;
+    var k1=0;
+    var t1=0;
+    var empty=[];
+    var empty1=[];
+    for(let i1=0;i1<date3.length;i1++){
+       empty.push(NaN);
+       empty1.push(NaN);
+    }
+    while(i1<date3.length){
       //console.log(date3[i]);
      
       
-      if(j<date.length){
-        if(date[j]==date3[i]){
-          j++;
-          i++;
+      if(j1<date.length){
+        if(date[j1]==date3[i1]){
+          empty[i1]=price[j1];
+          j1++;
+          i1++;
         }
         else{
-          price.splice(j, 0, NaN);
-          i++;
+          //price.splice(j, 0, NaN);
+          i1++;
         }
       }
+      else{
+        break;
+      }
     }
-    while(i<date3.length){
+    //console.log(i);
+    while(t1<date3.length){
       
-      if(k<date1.length){
-        if(date[k]==date3[i]){
-          k++;
-          i++;
+      if(k1<date1.length){
+        if(date1[k1]==date3[t1]){
+          empty1[t1]=price1[k1];
+          k1++;
+          t1++;
         }
         else{
-          price1.splice(k, 0, NaN);
-          i++;
+         // price1.splice(k, 0, NaN);
+          t1++;
         }
+      }
+      else{
+   break;
       }
     }
     console.log(date);
@@ -190,7 +206,8 @@ export class FusionchComponent implements OnInit {
     console.log(date1);
     console.log(price1);
 
-
+    console.log(empty);
+    console.log(empty1);
 
 
 
@@ -205,13 +222,13 @@ export class FusionchComponent implements OnInit {
         datasets: [
           {
             label:this.company_name+" ("+this.stock_exchange+")",
-            data: price,
+            data: empty,
             borderColor: '#3cba9f',
             fill: false
           },
           {
             label:this.company_name1+" ("+this.stock_exchange1+")",
-            data: price1,
+            data: empty1,
             borderColor: '#ffcc00',
             fill: false
           }

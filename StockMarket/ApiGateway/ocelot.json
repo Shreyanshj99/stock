@@ -35,9 +35,10 @@
       ],
       "UpstreamPathTemplate": "/ApplicationUser/{METHOD}",
       "UpstreamHttpMethod": [ "POST" ]
+
     } /*,
     {
-      "DownstreamPathTemplate": "/api/UserProfile/{METHOD}",
+      "DownstreamPathTemplate": "/api/UserProfile",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -45,7 +46,7 @@
           "Port": 44355
         }
       ],
-      "UpstreamPathTemplate": "/UserProfile/{METHOD}",
+      "UpstreamPathTemplate": "/UserProfile",
       "UpstreamHttpMethod": [ "GET", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -54,7 +55,8 @@
     }
   */
   
-
+  
+  
   ]
 
 }

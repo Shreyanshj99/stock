@@ -17,6 +17,8 @@ import { UseripoComponent } from './useripo/useripo.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsercompanyComponent } from './usercompany/usercompany.component';
 import { FusionchComponent } from './fusionch/fusionch.component';
+import { SectorComponent } from './sector/sector.component';
+
 
 const routes: Routes = [
   {path:'',redirectTo:'/user/login',pathMatch:'full'},
@@ -40,7 +42,8 @@ const routes: Routes = [
   {path:'home/userIpo',component:UseripoComponent,canActivate:[AuthGuard],data :{permittedRoles:['user']}},
   {path:'home/profile',component:ProfileComponent,canActivate:[AuthGuard],data :{permittedRoles:['user']}},
   {path:'home/usercompany',component:UsercompanyComponent,canActivate:[AuthGuard],data :{permittedRoles:['user']}},
-  {path:'home/comparecompany',component:FusionchComponent,canActivate:[AuthGuard],data :{permittedRoles:['user']}}
+  {path:'home/comparecompany',component:FusionchComponent,canActivate:[AuthGuard],data :{permittedRoles:['user']}},
+  {path:'home/comparesector',component:SectorComponent,canActivate:[AuthGuard],data :{permittedRoles:['user']}}
   ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

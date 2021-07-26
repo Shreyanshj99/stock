@@ -41,19 +41,20 @@ export class UserService {
       FullName: this.formModel.value.FullName,
       Password: this.formModel.value.Passwords.Password
     };
-    return this.http.post(this.BaseURI1 + '/ApplicationUser/Register', body);
+    return this.http.post(this.BaseURI + '/ApplicationUser/Register', body);
   }
 
   login(formData:any) {
-    return this.http.post(this.BaseURI1 + '/ApplicationUser/Login', formData);
+    return this.http.post(this.BaseURI + '/ApplicationUser/Login', formData);
   }
   
 confirmEmail(model: any) {
-  return this.http.post(this.BaseURI1 + '/ApplicationUser/confirmemail', model);
+  return this.http.post(this.BaseURI + '/ApplicationUser/confirmemail', model);
 }
   getUserProfile() {
     return this.http.get(this.BaseURI + '/UserProfile');
   }
+  
   ChangePassword(val1:any) {
     return this.http.post(this.BaseURI + '/UserProfile',val1);
   }
